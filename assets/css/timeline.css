@@ -14,7 +14,7 @@
 
 .timeline-item {
   width: 100%;
-  margin-bottom: -70px;
+  margin-bottom: 0px;
 }
 .timeline-item:nth-child(even) .timeline-content {
   float: right;

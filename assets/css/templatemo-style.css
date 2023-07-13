@@ -51,6 +51,12 @@ p {
     color: #fff;
 }
 
+.maintext {
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+}
+
 h4 {
     font-size: 26px;
     font-weight: 700;
@@ -316,6 +322,7 @@ html {
     height: 3px;
     background-color: rgba(0, 255, 255, 1.0);
     margin: 10px auto;
+    text-align: left;
 }
 
 .section-heading span {
@@ -369,6 +376,14 @@ button:hover {
 
 /* Image Post */
 
+.image-post-1{
+    background-color: white;
+}
+
+.image-post-1-post {
+    margin-bottom: 20px;
+}
+
 .image-post-2-post {
     margin-top: 60px;
     padding-top: 60px;
@@ -378,6 +393,8 @@ button:hover {
 .image-post-1 img,
 .image-post-2 img {
     border-radius: 5px;
+    margin-bottom: 10px;
+
 }
 
 .image-post-2-post h4,

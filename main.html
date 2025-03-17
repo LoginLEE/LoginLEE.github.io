@@ -376,13 +376,15 @@
                             
                             if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
                                 trans_sourcelang == 'zh-CN';
+                                console.log('CHANGED1');
                             } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
                                 trans_sourcelang == 'zh-TW';
+                                console.log('CHANGED2');
                             } else if (trans_sourcelang == 'yue'){
                                 trans_sourcelang == 'zh-TW';
-                            }
+                                console.log('CHANGED3');
 
-                            trans_sourcelang = 'zh-TW';
+                            }
 
                             console.log("After: " + trans_sourcelang + " " + trans_destlang);
 

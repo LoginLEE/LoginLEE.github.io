@@ -147,6 +147,7 @@
         //////////////////////////////////////////////////////////
         // URLからの値読み込み -------------------
         var arg_recog = getParam('recog');
+        if (arg_recog == "yue") arg_recog = "zh_TW";
         var arg_trans = getParam('trans');
         var arg_trans2 = getParam('trans2');
         var arg_trans3 = getParam('trans3');

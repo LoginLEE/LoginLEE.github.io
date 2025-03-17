@@ -372,18 +372,17 @@
                         // 翻訳1言語目
                         if(arg_trans != null){
 
-                            console.log("trans_sourcelang: " + trans_sourcelang);
-                            console.log("trans_destlang: " + trans_destlang);
+                            var trans_sourcelang1 = trans_sourcelang;
 
-                            // if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
-                            //     trans_sourcelang = 'zh-CN';
-                            // } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
-                            //     trans_sourcelang = 'zh-TW';
-                            // } else if (trans_sourcelang == 'yue'){
-                            //     trans_sourcelang = 'zh-TW';
-                            // }
+                            if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
+                                trans_sourcelang1 = 'zh-CN';
+                            } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
+                                trans_sourcelang1 = 'zh-TW';
+                            } else if (trans_sourcelang == 'yue'){
+                                trans_sourcelang1 = 'zh-TW';
+                            }
 
-                            query = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang + '&target=' + trans_destlang;
+                            query = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang1 + '&target=' + trans_destlang;
                             request.open('GET', query, true);
 
                             request.onreadystatechange = function(){
@@ -423,7 +422,19 @@
 
                         // 翻訳2言語目
                         if(arg_trans2 != null){
-                            query2 = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang + '&target=' + trans2_destlang;
+
+                            var trans_sourcelang2 = trans_sourcelang;
+
+                            if (trans_sourcelang == 'yue' && (trans2_destlang == 'zh-TW' || trans2_destlang == 'zh-HK')){
+                                trans_sourcelang2 = 'zh-CN';
+                            } else if (trans_sourcelang == "yue" && trans2_destlang == "zh-CN"){
+                                trans_sourcelang2 = 'zh-TW';
+                            } else if (trans_sourcelang == 'yue'){
+                                trans_sourcelang2 = 'zh-TW';
+                            }
+
+                            query2 = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang2 + '&target=' + trans2_destlang;
+
                             request2.open('GET', query2, true);
 
                             request2.onreadystatechange = function(){
@@ -464,7 +475,18 @@
 
                         // 翻訳2言語目
                         if(arg_trans3 != null){
-                            query3 = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang + '&target=' + trans3_destlang;
+
+                            var trans_sourcelang3 = trans_sourcelang;
+
+                            if (trans_sourcelang == 'yue' && (trans3_destlang == 'zh-TW' || trans3_destlang == 'zh-HK')){
+                                trans_sourcelang3 = 'zh-CN';
+                            } else if (trans_sourcelang == "yue" && trans3_destlang == "zh-CN"){
+                                trans_sourcelang3 = 'zh-TW';
+                            } else if (trans_sourcelang == 'yue'){
+                                trans_sourcelang3 = 'zh-TW';
+                            }
+
+                            query3 = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang3 + '&target=' + trans3_destlang;
                             request3.open('GET', query3, true);
 
                             request3.onreadystatechange = function(){

@@ -374,15 +374,15 @@
 
                             console.log("Before: " + trans_sourcelang + " " + trans_destlang);
                             
-                            if (trans_sourcelang == "yue" && (trans_destlang == "zh-TW" || trans_destlang == "zh-HK")){
-                                trans_sourcelang == "zh-CN";
+                            if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
+                                trans_sourcelang == 'zh-CN';
                             } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
-                                trans_sourcelang == "zh-TW";
-                            } else if (trans_sourcelang == "yue"){
-                                trans_sourcelang == "zh-TW";
+                                trans_sourcelang == 'zh-TW';
+                            } else if (trans_sourcelang == 'yue'){
+                                trans_sourcelang == 'zh-TW';
                             }
 
-                            trans_sourcelang = "zh-TW";
+                            trans_sourcelang = 'zh-TW';
 
                             console.log("After: " + trans_sourcelang + " " + trans_destlang);
 

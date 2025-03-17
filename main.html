@@ -147,9 +147,6 @@
         //////////////////////////////////////////////////////////
         // URLからの値読み込み -------------------
         var arg_recog = getParam('recog');
-        console.log("before arg_recog: " + arg_recog);
-        if (arg_recog == "yue") arg_recog = 'zh_HK';
-        console.log("after arg_recog: " + arg_recog);
         var arg_trans = getParam('trans');
         var arg_trans2 = getParam('trans2');
         var arg_trans3 = getParam('trans3');
@@ -374,6 +371,15 @@
 
                         // 翻訳1言語目
                         if(arg_trans != null){
+                            
+                            if (trans_sourcelang == "yue" && (trans_destlang == "zh-TW" || trans_destlang == "zh-HK")){
+                                trans_sourcelang == "zh-CN";
+                            } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
+                                trans_sourcelang == "zh-TW";
+                            } else if (trans_sourcelang == "yue"){
+                                trans_sourcelang == "zh-TW";
+                            }
+
                             query = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang + '&target=' + trans_destlang;
                             request.open('GET', query, true);
 

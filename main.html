@@ -372,19 +372,16 @@
                         // 翻訳1言語目
                         if(arg_trans != null){
 
-                            console.log("Before: " + trans_sourcelang + " " + trans_destlang);
+                            console.log("trans_sourcelang: " + trans_sourcelang);
+                            console.log("trans_destlang: " + trans_destlang);
 
-                            console.log(trans_sourcelang == 'yue' + trans_destlang == 'zh-TW' + trans_destlang == 'zh-HK' + trans_destlang == "zh-CN");
-
-                            if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
-                                trans_sourcelang = 'zh-CN';
-                            } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
-                                trans_sourcelang = 'zh-TW';
-                            } else if (trans_sourcelang == 'yue'){
-                                trans_sourcelang = 'zh-TW';
-                            }
-
-                            console.log("After: " + trans_sourcelang + " " + trans_destlang);
+                            // if (trans_sourcelang == 'yue' && (trans_destlang == 'zh-TW' || trans_destlang == 'zh-HK')){
+                            //     trans_sourcelang = 'zh-CN';
+                            // } else if (trans_sourcelang == "yue" && trans_destlang == "zh-CN"){
+                            //     trans_sourcelang = 'zh-TW';
+                            // } else if (trans_sourcelang == 'yue'){
+                            //     trans_sourcelang = 'zh-TW';
+                            // }
 
                             query = TRANS_URL + '?text=' + recog_text + '&source=' + trans_sourcelang + '&target=' + trans_destlang;
                             request.open('GET', query, true);

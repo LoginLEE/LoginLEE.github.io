@@ -118,7 +118,7 @@
 
 <!-- # API key text box ##################### -->
 用嚟翻譯嘅 Google 密鑰 (部署作業 ID): <input type="text" name="gas_key" id="gas_key" size="60" oninput="updateOptionValues();" /> 點樣建立個密鑰 → <a target="_blank" href="http://www.sayonari.com/trans_asr/index_asr.html">[LINK]</a><BR>
-    翻譯次數：<div id="displayTransCount" style="display: inline-block; _display: inline;"></div><font color="gray">（限額：免費： 5,000 次，付費： 20,000 次） ← 畀錢 Google ，唔係畀我</font><BR>
+    翻譯次數：<div id="displayTransCount" style="display: inline-block; _display: inline;"></div><font color="gray">（每日限額：免費： 5,000 次，付費： 20,000 次） ← 畀錢 Google ，唔係畀我</font><BR>
 <HR>
 
 <!-- # 背景の色 ############################## -->
@@ -222,9 +222,7 @@
     <option value="ko">韓國語</option>
     <option value="zh-CN">普通話</option>
     <option value="zh-TW">國語</option>
-    <option value="zh-HK">廣東話</option>
-    <option value="yue">yue</option>
-    <option value="yue-Hant-HK">yue-Hant-HK</option>
+    <option value="yue">廣東話</option>
     <option value="fr">法語</option>
     <option value="it">義大利語</option>
     <option value="de">德語</option>
@@ -285,7 +283,7 @@
     <option value="ko">韓國語</option>
     <option value="zh-CN">普通話</option>
     <option value="zh-TW">國語</option>
-    <option value="zh-HK">香港廣東話</option>
+    <option value="zh-HK">廣東話</option>
     <option value="fr">法語</option>
     <option value="it">義大利語</option>
     <option value="de">德語</option>
@@ -346,7 +344,7 @@
     <option value="ko">韓國語</option>
     <option value="zh-CN">普通話</option>
     <option value="zh-TW">國語</option>
-    <option value="zh-HK">香港廣東話</option>
+    <option value="zh-HK">廣東話</option>
     <option value="fr">法語</option>
     <option value="it">義大利語</option>
     <option value="de">德語</option>
@@ -815,7 +813,7 @@
         var iframe = document.getElementById('asr_frame');
         var transCount = iframe.contentWindow.document.getElementById('translationCount').innerHTML;
         if(transCount == ''){
-            transCount = '[ココに回数出るよ！]';
+            transCount = '[呢度會顯示剩餘次數！]';
         }
         return transCount;
     }
